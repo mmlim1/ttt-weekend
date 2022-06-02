@@ -9,10 +9,10 @@ let winner //represent if anyone has won yet, or if a tie has occured
 
 
 /*------------------------ Cached Element References ------------------------*/
-const squareEls = document.getElementsByClassName('board-div')
+const squareEls = document.querySelectorAll('.board-div')
 const messageEl = document.querySelector('h2')
-console.log(squareEls)
-console.log(messageEl)
+//console.log(squareEls)
+console.log(messageEl.textContent)
 
 
 
@@ -25,13 +25,55 @@ console.log(messageEl)
 init()
 
 function init() {
-  board = [null, null, null, null, null, null, null, null, null]
+  board = [1, 1, null, null, null, null, null, null, null]
   turn = 1 //represents player X
   winner = null
   render()
 
 }
-console.log(init)
+
+function render() {
+  //let squareIndex
+  board.forEach(function(element, index) {
+    if (board[index] === 1) {
+      squareEls[index].textContent = 'x'
+    } else if (board[index] === 0) {
+      squareEls[index].textContent = 'o'
+    } else if (board[index] === null) {
+      squareEls[index].textContent = ''
+    }
+  })
+    if (winner === null) {
+      messageEl.textContent = `It is player ${turn}'s turn!`
+    } else if (winner === 'T') {
+      messageEl.textContent = `It's a tie!`
+    } else {
+      messageEl.textContent = `Player ${winner} won!`
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
