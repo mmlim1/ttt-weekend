@@ -22,6 +22,21 @@ console.log(messageEl)
 
 
 /*-------------------------------- Functions --------------------------------*/
+init()
+
+function init() {
+  board = [null, null, null, null, null, null, null, null, null]
+  turn = 1 //represents player X
+  winner = null
+  render()
+
+}
+console.log(init)
+
+
+
+
+
 
 // Step 1 - Define the required variables used to track the state of the game
 
