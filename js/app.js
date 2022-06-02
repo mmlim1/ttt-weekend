@@ -28,7 +28,9 @@ console.log(messageEl.textContent)
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+squareEls.forEach(function(square) {
+  square.addEventListener('click', handleClick)
+})
 
 
 
@@ -63,7 +65,23 @@ function render() {
   }
 } 
 
+function handleClick(evt) {
+  const sqIdx = parseInt(evt.target.id.slice(2))
+  if (board[sqIdx] !== null || winner !== null) {
+    return
+  } 
+  board[sqIdx] = turn
+  turn = turn * -1 
+  getWinner()
+  render()
+console.log(sqIdx)
+console.log(board[sqIdx])
+console.log(turn)
+}
 
+function getWinner() {
+  winner ===
+}
 
 
 
