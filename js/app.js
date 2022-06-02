@@ -3,16 +3,21 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-const board //state of the sqaures on the board
-const turn //track whose turn it is
-const winner //represent if anyone has won yet, or if a tie has occured
+let board //state of the sqaures on the board
+let turn //track whose turn it is
+let winner //represent if anyone has won yet, or if a tie has occured
 
 
 /*------------------------ Cached Element References ------------------------*/
+const squareEls = document.getElementsByClassName('board-div')
+const messageEl = document.querySelector('h2')
+console.log(squareEls)
+console.log(messageEl)
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
+
 
 
 
