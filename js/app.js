@@ -20,7 +20,6 @@ let winner //represent if anyone has won yet, or if a tie has occured
 const squareEls = document.querySelectorAll('.board-div')
 const messageEl = document.querySelector('h2')
 const resetBtnEl = document.querySelector('button')
-//console.log(squareEls)
 console.log(messageEl.textContent)
 
 
